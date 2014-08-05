@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+
+  get 'static_pages/privacy_notice'
+
+  get 'static_pages/terms_of_use'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
