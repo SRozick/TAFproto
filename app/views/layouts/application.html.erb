@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>TAFproto</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <div class="Logo"><a href="/home/">(Logo graphic here) Teachafish.org logo (TM) Gold line-art Silhouette of leaping fish and stylized blue text "Teachafish.org". </a></div>
+      <div class="top_menu">
+        <nav><ul>
+          <li><a href="/Coming Soon/">Sign In</a></li>
+          <li><a href="/Coming Soon/">Register</a></li>
+          <li><a href="/Coming Soon/">Be Social</a></li>
+          <li><a href="/Coming Soon/">Site Map</a></li>
+        </ul></nav>
+      </div>
+      <div class="menu_bar">
+        <nav>
+          <a href="/Coming Soon/">Teach</a> |
+          <a href="/Coming Soon/">Learn</a> |
+          <a href="/Coming Soon/">Host</a> |
+          <a href="/Coming Soon/">Build</a> |
+          <a href="/Coming Soon/">How It Works</a> |
+          <a href="/Coming Soon/">Contact</a> |
+          <a href="/Coming Soon/">Blog</a> |
+        </nav>
+      </div>
+    </header>
 
-<%= yield %>
+  <%= yield %>
 
-</body>
+    <footer>
+      <div class="menu_bar">
+        <nav>
+          <a href="/Coming Soon/">Teach</a> |
+          <a href="/Coming Soon/">Learn</a> |
+          <a href="/Coming Soon/">Host</a> |
+          <a href="/Coming Soon/">Build</a> |
+          <a href="/Coming Soon/">How It Works</a> |
+          <a href="/Coming Soon/">Contact</a> |
+          <a href="/Coming Soon/">Blog</a> |
+        </nav>
+      </div>
+      <div>
+        <nav><ul>
+          <li><a href="/Coming Soon/">Privacy Notice</a></li>
+          <li><a href="/Coming Soon/">Terms of Use</a></li>
+          <li><a href="/Coming Soon/">Site Map</a></li>
+          <li><a href="/Coming Soon/">RSS Feed</a></li>
+          <li><a href="/Coming Soon/">Inherent Knowledge, LLC</a></li>
+        </ul></nav>
+      </div>
+      <div class="copyright_notice">
+        Site and contents © 2014 Inherent Knowledge, LLC.<br>
+        All rights reserved.
+      </div>
+      <div class="trademark_notice">
+        TeachaFish and the TeachaFish logo are registered trademarks of Inherent Knowledge, LLC.
+      </div>
+      <div class="usage_disclaimer">
+        Content posted by site users is the sole responsibility of those users.  No infringement is intended or implied.  TeachaFish.org respects the intellectual property rights of others.  If you believe your rights have been infringed, please contact the site administrator by using the contact form provided and indicate the nature of the infringement, specific URL, date, time, and the page title.
+      </div>
+    </footer>
+  </body>
 </html>
