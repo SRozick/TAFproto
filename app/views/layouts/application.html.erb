@@ -5,19 +5,27 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <!-- todo:  See Wiki on html5 Shiv and consider whether js file is best loaded locally or remotely.  AVOID https warnings; ENSURE code control is available. -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
   </head>
   <body>
-    <header>
-      <div class="Logo"><a href="/home/">(Logo graphic here) Teachafish.org logo (TM) Gold line-art Silhouette of leaping fish and stylized blue text "Teachafish.org". </a></div>
-      <div class="top_menu">
-        <nav><ul>
-          <li><a href="/Coming Soon/">Sign In</a></li>
-          <li><a href="/Coming Soon/">Register</a></li>
-          <li><a href="/Coming Soon/">Be Social</a></li>
-          <li><a href="/Coming Soon/">Site Map</a></li>
-        </ul></nav>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="logo container">
+          <%= link_to image_tag("TeachaFish-logo-872x254.png", alt: "Teachafish.org(TM) logo: Gold line-art silhouette of leaping fish and stylized blue text (TeachaFish.org)"), '#', id: "Teachafish_logo" %>
+        </div>
+        <nav>
+          <ul class="nav nav-pills nav-stacked">
+            <li><%= link_to "Sign In",    '#' %></li>
+            <li><%= link_to "Register",   '#' %></li>
+            <li><%= link_to "Be Social",  '#' %></li>
+            <li><%= link_to "Site Map",   '#' %></li>
+          </ul>
+        </nav>
       </div>
-      <div class="menu_bar">
+<!--      <div class="nav-justified menu_bar" role="navigation">
         <nav>
           <a href="/Coming Soon/">Teach</a> |
           <a href="/Coming Soon/">Learn</a> |
@@ -28,11 +36,12 @@
           <a href="/Coming Soon/">Blog</a> |
         </nav>
       </div>
+-->
     </header>
-
-  <%= yield %>
-
-    <footer>
+    <div class="container">
+      <%= yield %>
+    </div>
+<!--    <footer>
       <div class="menu_bar">
         <nav>
           <a href="/Coming Soon/">Teach</a> |
@@ -64,5 +73,7 @@
         Content posted by site users is the sole responsibility of those users.  No infringement is intended or implied.  TeachaFish.org respects the intellectual property rights of others.  If you believe your rights have been infringed, please contact the site administrator by using the contact form provided and indicate the nature of the infringement, specific URL, date, time, and the page title.
       </div>
     </footer>
+-->
+
   </body>
 </html>
